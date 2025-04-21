@@ -87,7 +87,7 @@ public class JuegoBingo implements Icarton {
                 int num = carton[i][j];
     
                 if (num != 0) {
-                    // Validar el rango
+                    
                     if (num < 1 || num > 90) return false;
     
                     // Verificar que no se repita
@@ -98,7 +98,7 @@ public class JuegoBingo implements Icarton {
                 }
             }
     
-            // Cada fila debe tener 5 números
+            
             if (cantidadNumeros != 5) return false;
         }
     
@@ -117,7 +117,7 @@ public class JuegoBingo implements Icarton {
                 int col = random.nextInt(9);
                 if (carton[fila][col] == 0) {
                     int min = col * 10 + 1;
-                    int max = (col == 8) ? 90 : (col + 1) * 10;
+                    int max = (col == 8) ? 90 : (col + 1) * 10; // para quede hasta 90
                     int num;
     
                     do {
@@ -134,12 +134,12 @@ public class JuegoBingo implements Icarton {
         return carton;
     }
     
-    // Método para mostrar el cartón
+    
     public static void mostrarCarton(int[][] carton) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
                 if (carton[i][j] == 0) {
-                    System.out.print(" \t"); // espacio vacío
+                    System.out.print(" \t"); 
                 } else {
                     System.out.print(carton[i][j] + "\t");
                 }

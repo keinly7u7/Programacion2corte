@@ -1,6 +1,6 @@
 package Mercagala;
 
-public interface Producto {
+public interface producto {
     double calcularPrecio();
 }
 

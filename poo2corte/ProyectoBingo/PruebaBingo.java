@@ -15,12 +15,12 @@ public class PruebaBingo {
         Scanner sc = new Scanner(System.in);
         boolean bingo = false;
 
-        // para comenzar
+        
         while (!bingo) {
             System.out.print("Ingresa un número (1-90): ");
             int numero = sc.nextInt();
 
-            // tachar el número
+           
             if (juego.tacharNumero(numero)) {
                 System.out.println("¡Tachado!");
             } else {
