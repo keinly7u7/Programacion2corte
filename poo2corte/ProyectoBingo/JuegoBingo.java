@@ -33,7 +33,7 @@ public class JuegoBingo implements Icarton {
     public void setLineaCantada(boolean lineaCantada) {
         this.lineaCantada = lineaCantada;
     }
-    //verifica si el numero esta en el carton(matriz) del bingo//
+    //verifica si el numero esta en el carton del bingo//
     public boolean tacharNumero(int numero) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -79,7 +79,7 @@ public class JuegoBingo implements Icarton {
         // arreglo para ver si un número ya apareció
         boolean[] usados = new boolean[91]; // índices del 1 al 90
     
-        // Revisar cada fila
+        // para revisar cada fila
         for (int i = 0; i < 3; i++) {
             int cantidadNumeros = 0;
     
@@ -87,7 +87,7 @@ public class JuegoBingo implements Icarton {
                 int num = carton[i][j];
     
                 if (num != 0) {
-                    // Validar rango
+                    // Validar el rango
                     if (num < 1 || num > 90) return false;
     
                     // Verificar que no se repita
@@ -102,7 +102,7 @@ public class JuegoBingo implements Icarton {
             if (cantidadNumeros != 5) return false;
         }
     
-        // Si pasó  las pruebas, el cartón es válido
+        
         return true;
     }
     public static int[][] generarCartonAleatorio() {
