@@ -45,7 +45,7 @@ public class JuegoBingo implements Icarton {
         }
         return false;
     }
-  //metodo "hay linea" es para verificar si el bingo esta completo\\
+  //metodo "hay linea" es para verificar si hay un mini bingo\\
     public boolean hayLinea() {
         for (int i = 0; i < 3; i++) {
             boolean completa = true;
